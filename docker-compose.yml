@@ -6,7 +6,7 @@ services:
     environment:
       PRINTER_ID: Paperless_Printer # ID (No spaces)
       PRINTER_NAME: Paperless Printer # Name of printer
-      HOSTNAME: '192.168.0.12:631' # Use static IP (below) or hostname if you have one
+      HOSTNAME: '192.168.30.210:631' # Use static IP (below) or hostname if you have one
       OUTPUT_SUBPATH: 'vprint' # Subpath in /mnt/output/
     networks:
       - cups-vlan
@@ -22,6 +22,6 @@ networks:
       parent: eth0 # Update as necessary
     ipam:
       config:
-        - subnet: "192.168.0.0/24"
-          ip_range: "192.168.0.12/32" #static IP
-          gateway: "192.168.0.1"
+        - subnet: "192.168.30.0/24"
+          ip_range: "192.168.30.210/32" #static IP
+          gateway: "192.168.30.1"
